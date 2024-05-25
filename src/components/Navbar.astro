@@ -1,10 +1,11 @@
 <nav class="navbar">
     <span>Александр Ершов</span>
     <ul>
-        <li><a href="#">Главная</a></li>
-        <li><a href="#skills">Мои навыки</a></li>
-        <li><a href="#work">Мой опыт</a></li>
-        <li class="contact-btn"><a href="https://t.me/a_yearshow">Написать мне</a></li>
+        <!--<li><a href="#">Главная</a></li>-->
+        <!--<li><a href="#skills">Мои навыки</a></li>-->
+        <!--<li><a href="#work">Мой опыт</a></li>-->
+        <!--<li class="contact-btn"><a href="https://t.me/a_yearshow">Написать мне</a></li>-->
+        <li><img src="/email.svg" alt="mail" /></li>
     </ul>
 </nav>
 
@@ -37,6 +38,10 @@
         font-size: 14px;
     }
 
+    .navbar > ul > li> img {
+        width: 25px;
+    }
+
     .navbar > ul > li > a {
         color: #1e1e1e;
         text-decoration: none;
@@ -56,22 +61,22 @@
         color: #fff;
     }
 
-    @media screen and (max-width: 700px) {
-        .navbar {
-            position: static;
-            flex-direction: column;
-            height: auto;
-            justify-content: center;
-            align-items: center;
-            width: calc(100% - 20px);
-            padding: 30px 0;
-            margin: 0 auto;
-        }
-
-        .navbar > ul {
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 0;
-        }
-    }
+    //@media screen and (max-width: 700px) {
+    //    .navbar {
+    //        position: static;
+    //        flex-direction: column;
+    //        height: auto;
+    //        justify-content: center;
+    //        align-items: center;
+    //        width: calc(100% - 20px);
+    //        padding: 30px 0;
+    //        margin: 0 auto;
+    //    }
+    //
+    //    .navbar > ul {
+    //        flex-wrap: wrap;
+    //        justify-content: center;
+    //        padding: 0;
+    //    }
+    //}
 </style>
