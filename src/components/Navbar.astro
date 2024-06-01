@@ -1,25 +1,28 @@
 <nav class="navbar">
     <span>Александр Ершов</span>
     <ul>
-        <li><img src="/email.svg" alt="mail" /></li>
+        <li>
+            <a href="https://github.com/YearShow" target="_blank" rel="noopener noreferrer">
+                <img src="/github.svg" alt="mail" />
+            </a>
+        </li>
     </ul>
 </nav>
 
 <style>
     .navbar {
-        z-index: 10;
+        height: 50px;
+        width: calc(100% - 40px);
+        padding: 10px 20px;
         position: fixed;
         top: 0;
         left: 0;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        width: calc(100% - 40px);
-        height: 50px;
         border-bottom: 1px solid rgb(30, 30, 30, .3);
-        //background-color: rgb(255, 255, 255, .8);
         backdrop-filter: blur(8px) saturate(100%);
-        padding: 10px 20px;
+        z-index: 10;
     }
 
     .navbar > span {
@@ -34,17 +37,12 @@
         font-size: 14px;
     }
 
-    .navbar > ul > li> img {
+    .navbar img {
         width: 25px;
     }
 
-    .navbar > ul > li > a {
-        color: #1e1e1e;
-        text-decoration: none;
-        transition: all .3s;
-    }
-    .navbar > ul > li > a:hover {
-        color: orange;
+    .navbar img:hover {
+        cursor: pointer;
     }
 
     .navbar > ul > .contact-btn {

@@ -1,0 +1,72 @@
+---
+import Title from "../components/Title.astro";
+import {ConfettiButton} from "../components/ConfettiButton/ConfettiButton";
+---
+<section class="about">
+    <img src="./avatar.jpg" alt="avatar" />
+    <article>
+        <p>Привет, мир! Я Александр</p>
+        <Title text="Фронтенд-разработчик" />
+    </article>
+    <div class="about__button-group">
+        <ConfettiButton message="Moё резюме" link="./ершов-фронтенд-резюме.pdf" client:load />
+        <ConfettiButton message="Написать мне" link="https://t.me/a_yearshow" client:load />
+    </div>
+</section>
+
+<style>
+    .about {
+        height: calc(100vh - 50px);
+        width: 100%;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        text-align: center;
+        border-bottom: 1px solid rgb(30, 30, 30, .3);
+    }
+
+    .about__button-group {
+        display: flex;
+        gap: 20px;
+    }
+
+    .about > img {
+        width: 150px;
+        object-fit: cover;
+        animation: animate 7s linear infinite;
+    }
+
+    @keyframes animate {
+        0%, 100% {
+            border-radius: 50%;
+        }
+        25% {
+            border-radius: 60% 50% 60% 50% / 50% 50% 50% 50%;
+        }
+        50% {
+            border-radius: 50% 50% 50% 50% / 60% 50% 60% 50%;
+        }
+        75% {
+            border-radius: 50% 60% 50% 60% / 50% 50% 50% 50%;
+        }
+    }
+
+    .about > article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about > article > p {
+        margin: 0 0 5px;
+    }
+    @media screen and (max-width: 700px) {
+        .about > img {
+            width: 100px;
+        }
+    }
+</style>

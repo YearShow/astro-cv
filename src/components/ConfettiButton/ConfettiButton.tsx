@@ -5,8 +5,14 @@ import styles from "./ConfettiButton.module.css";
 export const ConfettiButton = ({message, link}: {message: string, link: string}) => {
     const [hasConfetti, toggleConfetti] = useState(false);
 
+    const fireworkAndOpen = (ms: number) => {
+        toggleConfetti(true);
+        setTimeout(() => {
+            window.open(link);
+        }, ms)
+    }
     return (
-        <div className={styles.container}>
+        <>
                 {hasConfetti && (
                     <div className={styles.confettiContainer}>
                         <ConfettiExplosion
@@ -15,15 +21,10 @@ export const ConfettiButton = ({message, link}: {message: string, link: string})
                     </div>
                 )}
                     <button className={styles.btn}
-                        onClick={() => {
-                            toggleConfetti(true);
-                            setTimeout(() => {
-                                window.open(link);
-                            }, 800)
-                        }}
+                        onClick={() => fireworkAndOpen(1100)}
                     >
                         <span>{message}</span>
                     </button>
-        </div>
+        </>
     );
 };
